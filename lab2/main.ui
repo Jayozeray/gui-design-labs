@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1000</width><height>680</height></rect></property>
+  <property name="minimumSize"><size><width>950</width><height>650</height></size></property>
+  <property name="font"><font><family>Segoe UI</family><pointsize>10</pointsize></font></property>
+  <property name="windowTitle"><string>Пульс · Лабораторная работа №2</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,1,0,0">
+    <property name="spacing"><number>18</number></property>
+    <property name="leftMargin"><number>28</number></property>
+    <property name="topMargin"><number>28</number></property>
+    <property name="rightMargin"><number>28</number></property>
+    <property name="bottomMargin"><number>28</number></property>
+    <item>
+     <layout class="QHBoxLayout" name="headerLayout">
+      <item>
+       <layout class="QVBoxLayout" name="titleLayout">
+        <property name="spacing"><number>6</number></property>
+        <item><widget class="QLabel" name="badgeLabel"><property name="text"><string>ЛАБОРАТОРНАЯ 02 · СИГНАЛЫ И СЛОТЫ</string></property></widget></item>
+        <item><widget class="QLabel" name="titleLabel"><property name="text"><string>Пульс</string></property></widget></item>
+        <item><widget class="QLabel" name="subtitleLabel"><property name="text"><string>Один ритм — три способа его измерить.</string></property></widget></item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="musicLabel">
+        <property name="minimumSize"><size><width>60</width><height>60</height></size></property>
+        <property name="maximumSize"><size><width>60</width><height>60</height></size></property>
+        <property name="text"><string>♫</string></property>
+        <property name="alignment"><set>Qt::AlignCenter</set></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item><widget class="QLabel" name="hintLabel"><property name="text"><string>Измени любое поле — два других пересчитаются автоматически.</string></property></widget></item>
+    <item>
+     <layout class="QHBoxLayout" name="cardsLayout" stretch="1,1,1">
+      <property name="spacing"><number>16</number></property>
+      <item>
+       <widget class="QFrame" name="bpmCard">
+        <layout class="QVBoxLayout" name="bpmLayout">
+         <property name="spacing"><number>10</number></property>
+         <property name="leftMargin"><number>20</number></property>
+         <property name="topMargin"><number>20</number></property>
+         <property name="rightMargin"><number>20</number></property>
+         <property name="bottomMargin"><number>20</number></property>
+         <item><widget class="QLabel" name="bpmStepLabel"><property name="text"><string>01 / ТЕМП</string></property><property name="fieldRole" stdset="0"><string>step</string></property></widget></item>
+         <item><widget class="QLabel" name="bpmTitleLabel"><property name="text"><string>Темп трека</string></property><property name="buddy"><cstring>bpmSpinBox</cstring></property><property name="fieldRole" stdset="0"><string>title</string></property></widget></item>
+         <item><widget class="QLabel" name="bpmDescriptionLabel"><property name="text"><string>Сколько ударов ритма
+помещается в одну минуту</string></property><property name="wordWrap"><bool>true</bool></property><property name="fieldRole" stdset="0"><string>description</string></property></widget></item>
+         <item>
+          <widget class="QDoubleSpinBox" name="bpmSpinBox">
+           <property name="minimumSize"><size><width>0</width><height>66</height></size></property>
+           <property name="buttonSymbols"><enum>QAbstractSpinBox::NoButtons</enum></property>
+           <property name="keyboardTracking"><bool>true</bool></property>
+           <property name="accelerated"><bool>true</bool></property>
+           <property name="decimals"><number>2</number></property>
+           <property name="minimum"><double>30.000000000000000</double></property>
+           <property name="maximum"><double>300.000000000000000</double></property>
+           <property name="singleStep"><double>1.000000000000000</double></property>
+           <property name="value"><double>120.000000000000000</double></property>
+           <property name="suffix"><string> BPM</string></property>
+           <property name="accessibleName"><string>Темп трека в ударах в минуту</string></property>
+           <property name="toolTip"><string>Введите число от 30 до 300. Можно использовать стрелки вверх и вниз.</string></property>
+          </widget>
+         </item>
+         <item><widget class="QLabel" name="bpmRangeLabel"><property name="text"><string>От 30 до 300 BPM</string></property><property name="fieldRole" stdset="0"><string>range</string></property></widget></item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="msCard">
+        <layout class="QVBoxLayout" name="msLayout">
+         <property name="spacing"><number>10</number></property>
+         <property name="leftMargin"><number>20</number></property>
+         <property name="topMargin"><number>20</number></property>
+         <property name="rightMargin"><number>20</number></property>
+         <property name="bottomMargin"><number>20</number></property>
+         <item><widget class="QLabel" name="msStepLabel"><property name="text"><string>02 / ИНТЕРВАЛ</string></property><property name="fieldRole" stdset="0"><string>step</string></property></widget></item>
+         <item><widget class="QLabel" name="msTitleLabel"><property name="text"><string>Между ударами</string></property><property name="buddy"><cstring>msSpinBox</cstring></property><property name="fieldRole" stdset="0"><string>title</string></property></widget></item>
+         <item><widget class="QLabel" name="msDescriptionLabel"><property name="text"><string>Время от одного удара
+до следующего</string></property><property name="wordWrap"><bool>true</bool></property><property name="fieldRole" stdset="0"><string>description</string></property></widget></item>
+         <item>
+          <widget class="QDoubleSpinBox" name="msSpinBox">
+           <property name="minimumSize"><size><width>0</width><height>66</height></size></property>
+           <property name="buttonSymbols"><enum>QAbstractSpinBox::NoButtons</enum></property>
+           <property name="keyboardTracking"><bool>true</bool></property>
+           <property name="accelerated"><bool>true</bool></property>
+           <property name="decimals"><number>2</number></property>
+           <property name="minimum"><double>200.000000000000000</double></property>
+           <property name="maximum"><double>2000.000000000000000</double></property>
+           <property name="singleStep"><double>10.000000000000000</double></property>
+           <property name="value"><double>500.000000000000000</double></property>
+           <property name="suffix"><string> мс</string></property>
+           <property name="accessibleName"><string>Время между ударами в миллисекундах</string></property>
+           <property name="toolTip"><string>Введите число от 200 до 2000 миллисекунд.</string></property>
+          </widget>
+         </item>
+         <item><widget class="QLabel" name="msRangeLabel"><property name="text"><string>От 200 до 2000 мс</string></property><property name="fieldRole" stdset="0"><string>range</string></property></widget></item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="hzCard">
+        <layout class="QVBoxLayout" name="hzLayout">
+         <property name="spacing"><number>10</number></property>
+         <property name="leftMargin"><number>20</number></property>
+         <property name="topMargin"><number>20</number></property>
+         <property name="rightMargin"><number>20</number></property>
+         <property name="bottomMargin"><number>20</number></property>
+         <item><widget class="QLabel" name="hzStepLabel"><property name="text"><string>03 / ЧАСТОТА</string></property><property name="fieldRole" stdset="0"><string>step</string></property></widget></item>
+         <item><widget class="QLabel" name="hzTitleLabel"><property name="text"><string>Удары в секунду</string></property><property name="buddy"><cstring>hzSpinBox</cstring></property><property name="fieldRole" stdset="0"><string>title</string></property></widget></item>
+         <item><widget class="QLabel" name="hzDescriptionLabel"><property name="text"><string>Сколько раз за секунду
+повторяется удар ритма</string></property><property name="wordWrap"><bool>true</bool></property><property name="fieldRole" stdset="0"><string>description</string></property></widget></item>
+         <item>
+          <widget class="QDoubleSpinBox" name="hzSpinBox">
+           <property name="minimumSize"><size><width>0</width><height>66</height></size></property>
+           <property name="buttonSymbols"><enum>QAbstractSpinBox::NoButtons</enum></property>
+           <property name="keyboardTracking"><bool>true</bool></property>
+           <property name="accelerated"><bool>true</bool></property>
+           <property name="decimals"><number>4</number></property>
+           <property name="minimum"><double>0.500000000000000</double></property>
+           <property name="maximum"><double>5.000000000000000</double></property>
+           <property name="singleStep"><double>0.100000000000000</double></property>
+           <property name="value"><double>2.000000000000000</double></property>
+           <property name="suffix"><string> Гц</string></property>
+           <property name="accessibleName"><string>Частота ударов ритма в герцах</string></property>
+           <property name="toolTip"><string>Введите число от 0,5 до 5. Один герц — один удар в секунду.</string></property>
+          </widget>
+         </item>
+         <item><widget class="QLabel" name="hzRangeLabel"><property name="text"><string>От 0,5 до 5 Гц</string></property><property name="fieldRole" stdset="0"><string>range</string></property></widget></item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QFrame" name="summaryFrame">
+      <layout class="QVBoxLayout" name="summaryLayout">
+       <property name="spacing"><number>10</number></property>
+       <property name="leftMargin"><number>20</number></property>
+       <property name="topMargin"><number>18</number></property>
+       <property name="rightMargin"><number>20</number></property>
+       <property name="bottomMargin"><number>18</number></property>
+       <item><widget class="QLabel" name="summaryTitleLabel"><property name="text"><string>ВСЕ ПОЛЯ СВЯЗАНЫ</string></property></widget></item>
+       <item><widget class="QLabel" name="summaryLabel"><property name="text"><string>120 BPM = 500 мс между ударами = 2 удара/с</string></property><property name="textFormat"><enum>Qt::RichText</enum></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+       <item><widget class="QLabel" name="formulaLabel"><property name="text"><string>60 000 / BPM = мс    ·    BPM / 60 = Гц</string></property></widget></item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bottomLayout">
+      <property name="spacing"><number>12</number></property>
+      <item>
+       <widget class="QFrame" name="pulseDot">
+        <property name="minimumSize"><size><width>34</width><height>34</height></size></property>
+        <property name="maximumSize"><size><width>34</width><height>34</height></size></property>
+        <property name="accessibleName"><string>Визуальный индикатор удара</string></property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="pulseLabelsLayout">
+        <property name="spacing"><number>4</number></property>
+        <item><widget class="QLabel" name="pulseTitleLabel"><property name="text"><string>Визуальный ритм</string></property></widget></item>
+        <item><widget class="QLabel" name="pulseStatusLabel"><property name="text"><string>Включи индикатор, чтобы увидеть ритм</string></property></widget></item>
+       </layout>
+      </item>
+      <item><spacer name="bottomSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
+      <item><widget class="QPushButton" name="resetButton"><property name="text"><string>Вернуть 120 BPM</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+      <item><widget class="QPushButton" name="pulseButton"><property name="text"><string>Показать ритм</string></property><property name="checkable"><bool>true</bool></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops><tabstop>bpmSpinBox</tabstop><tabstop>msSpinBox</tabstop><tabstop>hzSpinBox</tabstop><tabstop>resetButton</tabstop><tabstop>pulseButton</tabstop></tabstops>
+ <resources/>
+ <connections/>
+</ui>

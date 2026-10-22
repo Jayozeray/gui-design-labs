@@ -5,7 +5,15 @@
       "name": "Лабораторная работа №1",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/main.py",
+      "program": "${workspaceFolder}/lab1/main.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Лабораторная работа №2 — Пульс",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/lab2/main.py",
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}"
     }

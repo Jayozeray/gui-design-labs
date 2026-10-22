@@ -1,0 +1,143 @@
+/* Оформление окна. Вся логика пересчёта находится в Python. */
+QMainWindow, QWidget#centralwidget {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #fcf7f0, stop:0.5 #f7f1f8, stop:1 #eee8fa);
+}
+QLabel {
+    color: #51465f;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+}
+QLabel#badgeLabel {
+    color: #8b70a4;
+    font-size: 11px;
+    font-weight: bold;
+}
+QLabel#titleLabel {
+    font-size: 38px;
+    font-weight: bold;
+    color: #51405f;
+}
+QLabel#subtitleLabel, QLabel#hintLabel {
+    color: #8b7c93;
+    font-size: 14px;
+}
+QLabel#musicLabel {
+    background: #e8ddf6;
+    color: #9575ba;
+    border-radius: 30px;
+    font-size: 36px;
+}
+QFrame#bpmCard {
+    background: #eaf5ee;
+    border: 1px solid #dbe9df;
+    border-radius: 22px;
+}
+QFrame#msCard {
+    background: #fff0e6;
+    border: 1px solid #f2dfd3;
+    border-radius: 22px;
+}
+QFrame#hzCard {
+    background: #f0e9fb;
+    border: 1px solid #e3d8f3;
+    border-radius: 22px;
+}
+QLabel[fieldRole="step"] {
+    font-size: 11px;
+    font-weight: bold;
+    color: #8c7b95;
+}
+QLabel[fieldRole="title"] {
+    font-size: 18px;
+    font-weight: bold;
+}
+QLabel[fieldRole="description"] {
+    font-size: 13px;
+    color: #82758c;
+}
+QLabel[fieldRole="range"] {
+    font-size: 12px;
+    color: #8c7f94;
+}
+QDoubleSpinBox {
+    background: #fffdfd;
+    color: #51405f;
+    border: 1px solid #ded5e7;
+    border-radius: 14px;
+    padding: 10px;
+    font-size: 27px;
+    font-weight: bold;
+    selection-background-color: #dcc6ef;
+    selection-color: #42304f;
+}
+QDoubleSpinBox:focus {
+    border: 2px solid #ad8bcd;
+    padding: 9px;
+}
+QFrame#summaryFrame {
+    background: #fffdfd;
+    border: 1px solid #e9dfed;
+    border-radius: 20px;
+}
+QLabel#summaryTitleLabel {
+    font-size: 12px;
+    font-weight: bold;
+    color: #a083b3;
+}
+QLabel#summaryLabel {
+    font-size: 17px;
+    color: #5d4a6c;
+}
+QLabel#formulaLabel {
+    font-size: 13px;
+    color: #94869e;
+}
+QFrame#pulseDot {
+    background: #e2d6ed;
+    border: 5px solid #f2eaf8;
+    border-radius: 17px;
+}
+QFrame#pulseDot[active="true"] {
+    background: #a075c9;
+    border-color: #e3d2f1;
+}
+QLabel#pulseTitleLabel {
+    font-size: 14px;
+    font-weight: bold;
+}
+QLabel#pulseStatusLabel {
+    font-size: 12px;
+    color: #94819e;
+}
+QPushButton {
+    min-height: 22px;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+QPushButton#pulseButton {
+    background: #efb6aa;
+    color: #67434d;
+}
+QPushButton#pulseButton:hover {
+    background: #eaa89a;
+}
+QPushButton#pulseButton:checked {
+    background: #dcd0ed;
+    color: #674d81;
+}
+QPushButton#resetButton {
+    background: #fffdfd;
+    color: #887095;
+    border-color: #e2d6eb;
+}
+QPushButton#resetButton:hover {
+    background: #f2eaf8;
+}
+QPushButton:focus {
+    border-color: #ad8bcd;
+}
